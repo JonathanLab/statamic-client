@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "target": "ES6",
+    "module": "CommonJS",
+    "declaration": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+  },
+
+  "include": ["src"], // which files to compile
+  "exclude": ["node_modules", "**/__tests__/*"] // which files to skip
+}
