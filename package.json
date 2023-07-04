@@ -1,6 +1,6 @@
 {
   "name": "statamic-client",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,15 +9,28 @@
     "watch": "tsc -w",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib/**/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JonathanLab/statamic-client.git"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "author": "Jonathan",
   "license": "ISC",
@@ -26,13 +39,22 @@
     "@types/react": "^18.2.12",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.7",
+    "semantic-release": "^21.0.6",
     "typescript": "^5.0.4"
   },
   "dependencies": {
     "react": "^18.2.0",
     "swr": "^2.1.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
