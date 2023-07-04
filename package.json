@@ -26,6 +26,17 @@
   "release": {
     "branches": [
       "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      ["@semantic-release/git", {
+        "assets": ["dist/**/*.{js,css}", "docs", "package.json"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }]
     ]
   },
   "publishConfig": {
@@ -35,6 +46,7 @@
   "author": "Jonathan",
   "license": "ISC",
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "^20.3.2",
     "@types/react": "^18.2.12",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
