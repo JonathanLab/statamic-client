@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/JonathanLab/statamic-client/compare/v1.0.2...v1.0.3) (2023-09-19)
+
+
+### Bug Fixes
+
+* **ci:** force CI Fix ([a83347e](https://github.com/JonathanLab/statamic-client/commit/a83347e0e7e22bcc0b55971ac72c3d5c0bbac16e))
+
 ## [1.0.2](https://github.com/JonathanLab/statamic-client/compare/v1.0.1...v1.0.2) (2023-09-19)
 
 
