@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/JonathanLab/statamic-client/compare/v1.0.4...v1.0.5) (2023-09-19)
+
+
+### Bug Fixes
+
+* **package.json:** only release required files to npm ([88bc78b](https://github.com/JonathanLab/statamic-client/commit/88bc78b13bed902c2c2eaeedb82dbc44078d99a0))
+
 ## [1.0.4](https://github.com/JonathanLab/statamic-client/compare/v1.0.3...v1.0.4) (2023-09-19)
 
 
