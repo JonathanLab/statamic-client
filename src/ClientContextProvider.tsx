@@ -19,7 +19,7 @@ export function ClientContextProvider({
   children,
 }: ClientContextProviderProps) {
   if (!apiUrl) {
-    throw new Error('apiUrl is required for ClientContextProvider');
+    throw new Error('apiUrl is required for ClientContextProvider!');
   }
 
   return (
