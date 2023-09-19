@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/JonathanLab/statamic-client/compare/v1.0.3...v1.0.4) (2023-09-19)
+
+
+### Bug Fixes
+
+* **package.json:** add npm run build to prepare script ([ed575d2](https://github.com/JonathanLab/statamic-client/commit/ed575d2b71a2dd5f801abfa6934f7dbfa426a457))
+
 ## [1.0.3](https://github.com/JonathanLab/statamic-client/compare/v1.0.2...v1.0.3) (2023-09-19)
 
 
