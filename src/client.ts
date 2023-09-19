@@ -305,7 +305,7 @@ export class Client {
 class RequestError extends Error {
   constructor(error: Error, url: URL, requestInit: RequestInit) {
     super(error.message);
-    this.name = 'RequestError';
+    this.name = 'RequestError:';
     this.message =
       error.message +
       '\n' +
