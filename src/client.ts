@@ -8,6 +8,7 @@ import {
   Entry,
   Form,
   Forms,
+  Global,
   Globals,
   NavigationTree,
   Term,
@@ -33,6 +34,7 @@ export class Client {
   private readonly apiUrl: string;
   private readonly defaultRequestInit: RequestInit;
   private readonly defaultSite: string;
+  public previewToken: string | null = null;
 
   /**
    * Create a new Client instance.
@@ -122,6 +124,10 @@ export class Client {
   private buildURL(path: string, base: string, params?: Params): URL {
     const url = new URL(path, base);
     const urlParams = params ? buildParams(params).toString() : '';
+    const previewToken = this.previewToken;
+    if (previewToken) {
+      url.searchParams.append('token', previewToken);
+    }
 
     return new URL(`${url.toString()}${urlParams ? '?' + urlParams : ''}`);
   }
@@ -136,7 +142,6 @@ export class Client {
 
     // When using multi-site, the entries endpoint will serve from all sites at once.
     params = setSiteFilter(params);
-
     return await this.get(path, params);
   }
 

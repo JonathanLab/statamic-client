@@ -8,6 +8,7 @@ import {
   Entry,
   Form,
   Forms,
+  Global,
   Globals,
   NavigationTree,
   Term,
